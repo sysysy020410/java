@@ -7,32 +7,22 @@
 <button type="button" onclick="myFunction()">take a shot</button>
 
 </br>
-<div id="button">
-        <img id="picts" src="1.jpg" alt="">
-    </div>
+ <img src="1.jpg" id="img" width:400px height:550px/>
+
 </body>
 </html>
 
-    <script>
-
-        function change_pic(){
-            var button = document.getElementById("button");
-
-            var picts = document.getElementById("picts");
-
-            button.onclick = function(){
-                if(picts.getAttribute("src",2) == "1.jpg"){
-
-                    picts.setAttribute("src","2.jpg");
-
-                }else{
-
-                    picts.setAttribute("src","1.jpg");};}}
-        change_pic();
-
-    </script>
-
-
+<script>
+var image=document.getElementById('img');
+image.οnclick=function (){
+var mysrc=image.getAttribute('src');
+if(mysrc=='1.jpg'){
+image.setAttribute('src','2.jpg');
+}else{
+image.setAttribute('src','1.jpg');
+}
+}
+</script>
 
 
 <script>
