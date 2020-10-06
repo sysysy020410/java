@@ -7,14 +7,34 @@
 <button type="button" onclick="myFunction()">take a shot</button>
 
 </br>
-<button onclick="document.getElementById('myImage').src='1.jpg">before filter</button>
-
-<img width="500" height="400"/ id="myImage" src="1.jpg" src="2.jpg" style="text-align:center;">
-
-<button onclick="document.getElementById('myImage').src='2.jpg">after filter</button>
-  
+<div id="button">
+        <img id="picts" src="1.jpg" alt="">
+    </div>
 </body>
 </html>
+
+    <script>
+
+        function change_pic(){
+            var button = document.getElementById("button");
+
+            var picts = document.getElementById("picts");
+
+            button.onclick = function(){
+                if(picts.getAttribute("src",2) == "1.jpg"){
+
+                    picts.setAttribute("src","2.jpg");
+
+                }else{
+
+                    picts.setAttribute("src","1.jpg");};}}
+        change_pic();
+
+    </script>
+
+
+
+
 <script>
 function myFunction() {
     document.getElementById("demo").innerHTML = "you got my love";}
